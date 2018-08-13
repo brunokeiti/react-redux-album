@@ -54,7 +54,7 @@ class App extends React.Component {
         {this.props.album > 0 && Array.isArray(this.props.data) && this.props.data.map((item, i) => {
           if (item.albumId === this.props.album){
             return(
-              <Imagem thumbnailUrl={item.thumbnailUrl} clickImg={() => this.props.abrirFoto(true,item.url)}/>
+              <Imagem key={item.url} thumbnailUrl={item.thumbnailUrl} clickImg={() => this.props.abrirFoto(true,item.url)}/>
             )
           }
         })}
